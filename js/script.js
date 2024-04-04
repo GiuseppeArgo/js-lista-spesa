@@ -20,5 +20,22 @@ while (i < shoppingList.length) {
   listElem.append(listItemElem);
 
   i++;
-}
+};
+
+const newItemInput = document.getElementById("new-item");
+
+
+document.getElementById("add-btn").addEventListener ("click", function() {
+  const newItem = newItemInput.value;
+  shoppingList.push(newItem);
+  
+  const itemElem = document.createElement("li");
+  itemElem.innerHTML = newItem;
+  listElem.append(itemElem);
+  itemElem.addEventListener("click", function() {
+    itemElem.classList.toggle("done");
+  });
+});
+
+
 
