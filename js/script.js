@@ -37,6 +37,8 @@ document.getElementById("add-btn").addEventListener ("click", function() {
   });
 
   listElem.append(itemElem);
+
+  newItemInput.value = "";
 });
 
 
