@@ -31,10 +31,12 @@ document.getElementById("add-btn").addEventListener ("click", function() {
   
   const itemElem = document.createElement("li");
   itemElem.innerHTML = newItem;
-  listElem.append(itemElem);
+  
   itemElem.addEventListener("click", function() {
     itemElem.classList.toggle("done");
   });
+
+  listElem.append(itemElem);
 });
 
 
